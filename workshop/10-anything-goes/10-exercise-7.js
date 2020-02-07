@@ -10,12 +10,24 @@
 // Example:
 // function toUpperCase(str) { return str.toUpperCase(); }
 // map(["bob", "susie"], toUpperCase) returns ["BOB", "SUSIE"]
+let tempArray = []
 
 function map(lst, func) {
+    let tempHolder = [];
     // lst is an array and func is a function
-
+    for(i = 0; i < lst.length; i++) {
+    console.log(lst[i]);
+    tempHolder.push(func(lst[i]));
+    // tempHolder = lst.shift(charCount(tempHolder));
+    // tempHolde.push(lst);
+    }
+    return tempHolder;
 }
 // -------------------------------------------------------------------------
 function charCount(str) { return str.length };
 console.log('Q7: ', map(['Cyborg', 'Robin', 'Batman', 'Superman', 'Aquaman', 'Flash'], charCount));
 console.log('Q7: ', map(['Scott', 'Bob', 'Ric', 'Jim'], charCount));
+
+// 7. `.shift()` removes the first item from an array and returns it, with no arguements, mutates the array
+// let outfit = ['shoes', 'pants', 'shirt'];
+// console.log(outfits.shift())

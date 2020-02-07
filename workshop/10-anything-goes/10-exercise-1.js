@@ -4,6 +4,7 @@
 // The first character has position 0, which causes the last one to be found at position string.length - 1.
 // In other words, a two-character string has length 2, and its characters have positions 0 and 1.
 
+'stribng'[b]
 
 // Q1
 // Write a function countBs that takes a string as its only argument
@@ -11,7 +12,11 @@
 // characters there are in the string.
 
 function countBs(str) {
-
+    bCount = 0
+    for (i = 0; i < str.length; i ++) {
+        if (str[i].includes("B")) {
+            bCount += 1;
+        }
+    }
+    return bCount
 }
-// -------------------------------------------------------------------------
-console.log('Q1: ', countBs('BananaBabyBubbles'));

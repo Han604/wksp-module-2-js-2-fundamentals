@@ -15,9 +15,22 @@
 
 // See this site for a list of "narcissistic" numbers
 // http://mathworld.wolfram.com/NarcissisticNumber.html
+let armstrongNumbers = [];
 
 function identifyArmstrongNumbers(num1, num2) {
-
+    for (i = num1; i <= num2; i ++) {
+        let num = i.toString().split('');
+        let sum = 0;
+        num.forEach(function(num3){
+            sum = sum + Math.pow(num3, num.length)
+            console.log(num)
+        });
+        if (sum === i) {
+            armstrongNumbers.push(sum);
+        }
+    }
 }
 
-console.log(identifyArmstrongNumbers(100, 99999));
+
+identifyArmstrongNumbers(100, 1000);
+console.log(armstrongNumbers);

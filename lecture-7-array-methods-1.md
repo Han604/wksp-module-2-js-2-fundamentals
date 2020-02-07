@@ -38,6 +38,9 @@ The `.join()` method returns the array as a string.
 const lexicon = ['The', 'large', 'shaggy', 'dog', 'barked', 'at', 'the', 'silence'];
 
 let sentence = lexicon.join();
+lexicon.join(' ') //will return strings with space no comma
+--- 
+//different from toString, toString will not be manipulated with (' ')
 
 ```
 
@@ -51,12 +54,57 @@ And there are so many more.
 
 Let's dip into the internet and see if we can learn all of these methods collectively.
 
-1. `.includes()`, `.slice()`
-2. `.indexOf()`, `.push()` 
-3. `.pop()`, `.sort()`
-4. `.shift()`, `.unshift()`
-5. `.reverse()`, `.lastIndexOf()`
-6. `.splice()`, `.toString()`
+1. `.includes()` - searches for a value then returns a boolean. 
+let summer = ['annoying', 'sister', 'warrior'];
+console.log('.includes() ', summer.includes('sister'))
+
+2. `.slice()` - slice selected from a begin and an end (not necessary) returns a shallow version of the array counting the items. === strict
+let veg = ['carrot', 'celery', 'cabbage', 'brocoli', 'onion']
+const cruciferousVeg = veg.slice(2,4)
+
+3. `.indexOf()`, searches for first occurance of value or string
+let yoda = ['size', 'matters', 'not']
+let jedi = yoda.indexOf('not');
+console.log(jedi);
+
+4. `.push()` adds items to the end of the array and mutates the existing array
+let outfit = ['shoes', 'pants', 'shirt'];
+outfit.push('hat', 'purse', 'coat')
+console.log(outfit);
+
+5. `.pop()`, removes the last element of an array and returns it, with no arguements, mutates the array
+let outfit = ['shoes', 'pants', 'shirt'];
+console.log(outfits.pop())
+
+6. `.sort()` sorts the array alphabetically and returns the array and mutates it.
+let veg = ['carrot', 'celery', 'cabbage', 'brocoli', 'onion']
+console.log(veg.sort())
+
+7. `.shift()` removes the first item from an array and returns it, with no arguements, mutates the array
+let outfit = ['shoes', 'pants', 'shirt'];
+console.log(outfits.shift())
+
+8. `.unshift()` adds items to the beginning of the array mutates it too
+let outfit = ['shoes', 'pants', 'shirt'];
+outfit.unshift('wallet')
+
+9. `.reverse()`, reverses the elements, mutates it too
+let backtalk = ['backwards', 'is', 'this']
+backtalk.reverse();
+console.log(backtalk)
+
+10. `.lastIndexOf()` searches for an element, from the end to the front
+let yoda = ['size', 'matters', 'not']
+let jedi = yoda.lastIndexOf('not');
+console.log(jedi);
+
+11. `.splice()` removes and replaces instances of items //read up on this one i don't get it
+let array = [1, 2, 3, 4]
+array.splice(0, 2, 'string');
+console.log(array);
+
+12. `.toString()`
+
 
 - Split into teams of 2.
 - Take given methods

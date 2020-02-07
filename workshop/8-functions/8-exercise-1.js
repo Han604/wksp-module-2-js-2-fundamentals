@@ -4,7 +4,7 @@
 
 // Define the function
 function max(num1, num2) {
-
+    return num1 + num2
 }
 
 // Call the function

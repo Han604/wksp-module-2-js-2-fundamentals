@@ -81,7 +81,7 @@ It takes 2 parameters, the value to replace and the new value.
 ```js
 // Example
 const sentiment = 'I love programming';
-
+sentiment.replace('m','B');
 ```
 
 ---
@@ -95,9 +95,9 @@ const sentiment = 'I love programming';
 ```js
 // Example
 const sentiment = 'I love programming';
-
+sentiment.slice(0,5);
 ```
-
+starts counting at 0
 ---
 
 ### [`.concat()`](https://www.w3schools.com/jsreF/jsref_concat_string.asp)
@@ -108,6 +108,10 @@ The `.concat()` method is used to join two or more strings.
 // Example
 let partOne = 'Do or do not.';
 let partTwo = 'There is no try.';
+
+partOne.concat(partTwo); // with dot notation
+const newSentence = partOne+partTwo; //with evaluation
+//apparently you can also do this with interpolation
 
 ```
 
@@ -120,7 +124,7 @@ The `.split()` method "split" a string into an array of _substrings_.
 ```js
 // Example
 const truth = 'The greatest teacher, failure is.';
-
+truth.split(" ")
 ```
 
 ---
@@ -134,11 +138,13 @@ This method returns -1 if the value to search for never occurs.
 ```js
 // Example
 let yodaSpeak = "Fear is the path to the dark side. Fear leads to anger. Anger leads to hate. Hate leads to suffering.";
+let gummy = yodaSpeak.indexOf("is");
+console.log(gummy); //returns 77
 
 ```
 
 _Why would JavaScript decide to return `-1` instead of some other value? like `0`?_
-
+cuz of da array fool
 ---
 
 ## More String Methods here...

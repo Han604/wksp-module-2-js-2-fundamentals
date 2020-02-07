@@ -24,6 +24,8 @@ const words = ['The', 'large', 'shaggy', 'dog', 'barked', 'at', 'the', 'silence'
 
 words.forEach(function(word) {
     // do something
+    word + " violence"
+    console.log(word)
 });
 
 ```
@@ -41,6 +43,7 @@ const words = ['The', 'large', 'shaggy', 'dog', 'barked', 'at', 'the', 'silence'
 const newWords = words.map(function(word) {
     return word.toUpperCase();
 });
+console.log(newWords)
 
 ```
 
